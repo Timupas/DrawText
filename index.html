@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>ASCII Studio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="title">ASCII Studio</div>
+</div>
+
+<div class="app">
+    <canvas id="canvas" width="600" height="300"></canvas>
+
+    <div class="controls">
+        <button id="compileBtn">Compile</button>
+        <button id="clearBtn">Clear</button>
+
+        <label class="upload">
+            Upload Image
+            <input type="file" id="imageLoader" accept="image/*" hidden>
+        </label>
+    </div>
+
+    <textarea id="output" placeholder="ASCII result here..."></textarea>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

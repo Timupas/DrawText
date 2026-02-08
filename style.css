@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+/* ===== Верхняя панель-капсула ===== */
+.top-bar {
+    width: 92%;
+    height: 35px;
+    margin-top: 18px; /* чтобы не прилипала к верху */
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 9999px; /* делает форму «растянутого круга» */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.25);
+}
+
+/* Название */
+.title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+}
+
+/* ===== Основной контейнер ===== */
+.app {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ===== Canvas ===== */
+canvas {
+    border-radius: 22px;
+    background: black;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* ===== Контролы ===== */
+.controls {
+    display: flex;
+    gap: 15px;
+}
+
+/* ===== Кнопки iOS стекло ===== */
+button, .upload {
+    padding: 12px 22px;
+    border-radius: 16px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    background: rgba(255,255,255,0.14);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow:
+        0 6px 16px rgba(0,0,0,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.25);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover, .upload:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.22);
+}
+
+button:active, .upload:active {
+    transform: scale(0.96);
+}
+
+.upload {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== ASCII поле ===== */
+textarea {
+    width: 600px;
+    height: 300px;
+    border-radius: 22px;
+    border: none;
+    padding: 15px;
+    background: rgba(0,0,0,0.65);
+    color: #00ff88;
+    font-family: monospace;
+    font-size: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    resize: none;
+}
