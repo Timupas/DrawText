@@ -12,15 +12,15 @@ body {
     color: white;
 }
 
-/* ===== Верхняя панель-капсула ===== */
+
 .top-bar {
     width: 92%;
     height: 35px;
-    margin-top: 18px; /* чтобы не прилипала к верху */
+    margin-top: 18px;
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-radius: 9999px; /* делает форму «растянутого круга» */
+    border-radius: 9999px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,7 +29,7 @@ body {
         inset 0 1px 0 rgba(255,255,255,0.25);
 }
 
-/* Название */
+
 .title {
     font-size: 13px;
     font-weight: 600;
@@ -37,7 +37,7 @@ body {
     opacity: 0.9;
 }
 
-/* ===== Основной контейнер ===== */
+
 .app {
     margin-top: 15px;
     display: flex;
@@ -47,20 +47,20 @@ body {
     padding: 20px;
 }
 
-/* ===== Canvas ===== */
+
 canvas {
     border-radius: 22px;
     background: black;
     box-shadow: 0 20px 60px rgba(0,0,0,0.6);
 }
 
-/* ===== Контролы ===== */
+
 .controls {
     display: flex;
     gap: 15px;
 }
 
-/* ===== Кнопки iOS стекло ===== */
+
 button, .upload {
     padding: 12px 22px;
     border-radius: 16px;
@@ -93,7 +93,7 @@ button:active, .upload:active {
     justify-content: center;
 }
 
-/* ===== ASCII поле ===== */
+
 textarea {
     width: 600px;
     height: 300px;

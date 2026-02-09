@@ -4,16 +4,13 @@ const output = document.getElementById("output");
 
 let drawing = false;
 
-// ===== Кисть =====
 ctx.lineWidth = 8;
 ctx.lineCap = "round";
 ctx.strokeStyle = "white";
 
-// Чёрный фон
 ctx.fillStyle = "black";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-// ===== Рисование =====
 canvas.addEventListener("mousedown", () => drawing = true);
 canvas.addEventListener("mouseup", () => {
     drawing = false;
@@ -33,7 +30,6 @@ function draw(e) {
     ctx.moveTo(x, y);
 }
 
-// ===== Clear =====
 document.getElementById("clearBtn").addEventListener("click", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "black";
@@ -41,7 +37,7 @@ document.getElementById("clearBtn").addEventListener("click", () => {
     ctx.beginPath();
 });
 
-// ===== Загрузка изображения =====
+
 document.getElementById("imageLoader").addEventListener("change", function(e) {
     const reader = new FileReader();
     reader.onload = function(event) {
@@ -64,7 +60,7 @@ document.getElementById("imageLoader").addEventListener("change", function(e) {
     reader.readAsDataURL(e.target.files[0]);
 });
 
-// ===== ASCII символы плотности =====
+
 const shades = ["░","▒","▓","█"];
 
 document.getElementById("compileBtn").addEventListener("click", () => {
