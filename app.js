@@ -125,3 +125,13 @@ document.getElementById("compileBtn").addEventListener("click", () => {
 
     output.value = ascii;
 });
+
+
+function showPage(page) {
+    document.getElementById("mainPage").classList.add("hidden");
+    document.getElementById("profilePage").classList.add("hidden");
+    document.getElementById("supportPage").classList.add("hidden");
+
+    if (page === "profile") document.getElementById("profilePage").classList.remove("hidden");
+    if (page === "support") document.getElementById("supportPage").classList.remove("hidden");
+}

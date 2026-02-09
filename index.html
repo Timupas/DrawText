@@ -8,23 +8,47 @@
 <body>
 
 <div class="top-bar">
-    <div class="title">ASCII Studio</div>
+    <div class="title" onclick="showPage('main')">ASCII Studio</div>
+
+    <div class="nav-buttons">
+        <div class="circle-btn btn" onclick="showPage('profile')" title="Профиль">👤</div>
+        <a class="circle-btn btn" href="https://www.donationalerts.com/" target="_blank" title="Донат">💜</a>
+        <div class="circle-btn btn" onclick="showPage('support')" title="Поддержка">💬</div>
+    </div>
 </div>
 
-<div class="app">
+<!-- Главная -->
+<div class="app page" id="mainPage">
     <canvas id="canvas" width="600" height="300"></canvas>
 
     <div class="controls">
-        <button id="compileBtn">Compile</button>
-        <button id="clearBtn">Clear</button>
+        <button id="compileBtn" class="btn">Compile</button>
+        <button id="clearBtn" class="btn">Clear</button>
 
-        <label class="upload">
+        <label class="upload btn">
             Upload Image
             <input type="file" id="imageLoader" accept="image/*" hidden>
         </label>
     </div>
 
     <textarea id="output" placeholder="ASCII result here..."></textarea>
+</div>
+
+<!-- Профиль -->
+<div class="page hidden" id="profilePage">
+    <div class="card">
+        <div class="avatar">👤</div>
+        <h2>Username</h2>
+        <p>Функционал профиля в разработке</p>
+    </div>
+</div>
+
+<!-- Поддержка -->
+<div class="page hidden" id="supportPage">
+    <div class="card">
+        <h2>Техническая поддержка</h2>
+        <div class="chat-box">Чат поддержки в разработке...</div>
+    </div>
 </div>
 
 <script src="app.js"></script>
